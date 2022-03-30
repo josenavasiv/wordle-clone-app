@@ -1,8 +1,18 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { pushKey, removeKey, nextRow, resetMessage, invalidWordMessage, isWordle } from '../../redux/wordleSlice';
+import {
+	pushKey,
+	removeKey,
+	nextRow,
+	resetMessage,
+	invalidWordMessage,
+	isWordle,
+	pushExistingLetter,
+	pushInCorrectSlotLetter,
+	pushUsedUpLetter,
+} from '../../redux/wordleSlice';
 import { checkIfValidWord } from '../../redux/wordleSlice';
 
-const KeyBox = ({ inputsLeft, setInputsLeft, index, setIndex, letter }) => {
+const KeyBox = ({ inputsLeft, setInputsLeft, index, setIndex, letter, existsInWordle, inCorrectSlot, usedLetter }) => {
 	const { currentGuess, wordle } = useSelector((state) => state.wordle);
 	const dispatch = useDispatch();
 
@@ -10,10 +20,23 @@ const KeyBox = ({ inputsLeft, setInputsLeft, index, setIndex, letter }) => {
 		return JSON.stringify(guess) === JSON.stringify(word);
 	};
 
+	const addLetterIfExistsInWordle = () => {
+		currentGuess.forEach((char, i) => {
+			if (wordle[i] === char) dispatch(pushInCorrectSlotLetter(char));
+			else if (wordle.includes(char)) {
+				console.log('shoved');
+				console.log(char);
+				dispatch(pushExistingLetter(char));
+			} else {
+				dispatch(pushUsedUpLetter(char));
+			}
+		});
+	};
+
 	const handleClick = () => {
 		if (letter === 'ENTER') {
 			if (index === 5 && inputsLeft === 0) {
-				console.log('enter key pressed');
+				// console.log('enter key pressed');
 				dispatch(resetMessage());
 				if (!dispatch(checkIfValidWord())) {
 					// Dispatch If Current Guess is a Word
@@ -24,6 +47,7 @@ const KeyBox = ({ inputsLeft, setInputsLeft, index, setIndex, letter }) => {
 					dispatch(nextRow());
 					dispatch(isWordle());
 				} else {
+					addLetterIfExistsInWordle();
 					dispatch(nextRow());
 					setIndex(0);
 					setInputsLeft(5);
@@ -45,6 +69,30 @@ const KeyBox = ({ inputsLeft, setInputsLeft, index, setIndex, letter }) => {
 			}
 		}
 	};
+
+	if (inCorrectSlot) {
+		return (
+			<button className="btn btn-success" onClick={handleClick}>
+				{letter}
+			</button>
+		);
+	}
+
+	if (existsInWordle) {
+		return (
+			<button className="btn btn-warning" onClick={handleClick}>
+				{letter}
+			</button>
+		);
+	}
+
+	if (usedLetter) {
+		return (
+			<button className="btn btn-secondary" onClick={handleClick}>
+				{letter}
+			</button>
+		);
+	}
 
 	return (
 		<button className="btn btn-light" onClick={handleClick}>

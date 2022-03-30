@@ -13,7 +13,7 @@ const getWordle = async () => {
 	// const response = await axios.request(options);
 	// return response.data[0].toUpperCase();
 
-	return 'WORKS'.toUpperCase();
+	return 'frick'.toUpperCase();
 };
 
 const checkIfValidWord = async (word) => {

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { isNotWordle } from '../../redux/wordleSlice';
 
 const Guesses = () => {
-	const { currentGuess, row, prevGuess, wordleLoading } = useSelector((state) => state.wordle);
+	const { currentGuess, row, prevGuess } = useSelector((state) => state.wordle);
 	const dispatch = useDispatch();
 
 	const [row0, setRow0] = useState([]);

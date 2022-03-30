@@ -7,6 +7,7 @@ const initialState = {
 	wordle: [], // On success of asyncthunk add to this
 	existInWordleLetters: [],
 	inCorrectSlotLetters: [],
+	usedUpLetters: [],
 	message: '',
 	isWon: false,
 	isLost: false,
@@ -70,10 +71,13 @@ export const wordleSlice = createSlice({
 			state.message = 'You Lost LOL!';
 		},
 		pushExistingLetter: (state, action) => {
-			state.existInWordleLetters.push(action.payload.letter);
+			state.existInWordleLetters.push(action.payload);
 		},
 		pushInCorrectSlotLetter: (state, action) => {
-			state.inCorrectSlotLetters.push(action.payload.letter);
+			state.inCorrectSlotLetters.push(action.payload);
+		},
+		pushUsedUpLetter: (state, action) => {
+			state.usedUpLetters.push(action.payload);
 		},
 	},
 	extraReducers: (builder) => {
@@ -117,6 +121,7 @@ export const {
 	isNotWordle,
 	pushExistingLetter,
 	pushInCorrectSlotLetter,
+	pushUsedUpLetter,
 } = wordleSlice.actions;
 
 export default wordleSlice.reducer;
