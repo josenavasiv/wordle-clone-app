@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Stylish&display=swap');
+
 * {
-	color: #ffffff;
+	color: #f5f5f5;
+	font-family: 'Stylish', sans-serif;
+	font-size: 20px;
 }
 
 body {
-	background-color: #121213;
+	background-color: #121212;
 }
 
 .game-container {
@@ -15,15 +19,16 @@ body {
 }
 
 .key-container {
-	width: 510px;
+	width: 576px;
 	display: flex;
 	flex-wrap: wrap;
+	margin-top: 20px;
 }
 
 .key-container button {
-	width: 43px;
+	width: 49px;
 	height: 58px;
-	border-radius: 4px;
+	border-radius: 10px;
 	margin: 4px;
 }
 
@@ -33,7 +38,7 @@ body {
 
 .key-container button:nth-child(20),
 .key-container button:nth-child(28) {
-	width: 68px;
+	width: 80px;
 }
 
 .tile-container {
@@ -47,10 +52,26 @@ body {
 .tile-container .tile {
 	width: 62px;
 	height: 62px;
-	border: 2px solid#3a3a3c;
+	border: 2px solid#3C4245;
 	box-sizing: border-box;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: 2px;
+	font-size: 30px;
+	/* font-weight: 700; */
+}
+
+.title-container {
+	text-align: center;
+	width: 80vw;
+	border-bottom: solid 1px #3c4245;
+	/* font-weight: 700; */
+	font-size: 45px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.keyboard-tile {
+	font-size: 18px;
 }

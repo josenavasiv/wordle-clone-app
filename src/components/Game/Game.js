@@ -21,7 +21,7 @@ const Game = () => {
 
 	return (
 		<div className="game-container">
-			<h1>Wordle</h1>
+			<h1 className="title-container">Wordle</h1>
 			<Guesses />
 			<Keyboard />
 			{wordle && <div>Current Wordle: {wordle}</div>}

@@ -95,7 +95,7 @@ const KeyBox = ({ inputsLeft, setInputsLeft, index, setIndex, letter, existsInWo
 	}
 
 	return (
-		<button className="btn btn-light" onClick={handleClick}>
+		<button className="btn btn-light keyboard-tile" onClick={handleClick}>
 			{letter}
 		</button>
 	);
