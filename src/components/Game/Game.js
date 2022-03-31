@@ -24,10 +24,10 @@ const Game = () => {
 			<h1 className="title-container">Wordle</h1>
 			<Guesses />
 			<Keyboard />
-			{wordle && <div>Current Wordle: {wordle}</div>}
+			{/* {wordle && <div>Current Wordle: {wordle}</div>} */}
 			{isWon && (
 				<>
-					<div>You won! Wordle was {wordle}!</div>
+					<div>You won! Today's Wordle was {wordle}!</div>
 					<button className="btn btn-light" onClick={resetPage}>
 						RESET
 					</button>
@@ -35,7 +35,7 @@ const Game = () => {
 			)}
 			{isLost && (
 				<>
-					<div>You Lost! Wordle was {wordle}!</div>
+					<div>You Lost! Today's Wordle was {wordle}!</div>
 					<button className="btn btn-light" onClick={resetPage}>
 						RESET
 					</button>
