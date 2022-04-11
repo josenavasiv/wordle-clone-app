@@ -20,7 +20,15 @@ First iteration of the Wordle clone created with React and React-Redux w/ Redux 
     npm install
     ```
 
-2. Start development server
+2. Create and set environmental variables within .env in root directory
+
+    ```bash
+    REACT_APP_GET_RANDOM_HOST = random-words5.p.rapidapi.com
+    REACT_APP_GET_RANDOM_KEY = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    REACT_APP_GET_WORD_HOST = twinword-word-graph-dictionary.p.rapidapi.com
+    REACT_APP_GET_WORD_KEY = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    ```
+3. Start development server
 
     ```bash
     npm start
