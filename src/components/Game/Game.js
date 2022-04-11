@@ -41,6 +41,9 @@ const Game = () => {
 					</button>
 				</>
 			)}
+			<a href="https://github.com/josenavasiv/wordle-clone-app">
+				<img style={{ height: '42px', width: '42px', marginTop: '15px' }} src="/github.svg" alt="GitHubIcon" />
+			</a>
 		</div>
 	);
 };
