@@ -10,6 +10,7 @@ This project is the first iteration of the Wordle clone which was created with R
 -   [React Redux](https://react-redux.js.org/)
 -   [Axios](https://axios-http.com/)
 -   [RapidAPI](https://rapidapi.com/)
+-   [Bootstrap](https://getbootstrap.com/)
 
 ## Getting Started
 
