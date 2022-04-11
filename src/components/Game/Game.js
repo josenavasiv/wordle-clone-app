@@ -1,9 +1,8 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { getWordle } from '../../redux/wordleSlice';
 import { useSelector, useDispatch } from 'react-redux';
 import Keyboard from '../Keyboard/Keyboard';
 import Guesses from '../Guesses/Guesses';
-import { reset } from '../../redux/wordleSlice';
 
 const Game = () => {
 	const { wordle, wordleLoading, message, isWon, isLost } = useSelector((state) => state.wordle);
@@ -24,6 +23,7 @@ const Game = () => {
 			<h1 className="title-container">Wordle</h1>
 			<Guesses />
 			<Keyboard />
+			{message && <div>{message}</div>}
 			{/* {wordle && <div>Current Wordle: {wordle}</div>} */}
 			{isWon && (
 				<>

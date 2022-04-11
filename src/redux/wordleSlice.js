@@ -64,11 +64,9 @@ export const wordleSlice = createSlice({
 		},
 		isWordle: (state) => {
 			state.isWon = true;
-			state.message = 'You won!';
 		},
 		isNotWordle: (state) => {
 			state.isLost = true;
-			state.message = 'You Lost LOL!';
 		},
 		pushExistingLetter: (state, action) => {
 			state.existInWordleLetters.push(action.payload);
