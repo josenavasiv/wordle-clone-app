@@ -1,6 +1,6 @@
 # Wordle Clone
 
-This project is the first iteration of the Wordle clone which was created with React and React-Redux w/ Redux Toolkit. Consumes the [Random Words](https://rapidapi.com/sheharyar566/api/random-words5/) and the [Word Dictionary](https://rapidapi.com/twinword/api/word-dictionary/) APIs from RapidAPI with Axios in order to get a random word to use for the game.
+This project is my first iteration of the Wordle clone created with React and React-Redux w/ Redux Toolkit. Consumes the [Random Words](https://rapidapi.com/sheharyar566/api/random-words5/) and the [Word Dictionary](https://rapidapi.com/twinword/api/word-dictionary/) APIs from RapidAPI with Axios in order to get a random word to use for the game.
 
 ![alt text](https://i.imgur.com/JxQG89i.png)
 
