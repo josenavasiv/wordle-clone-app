@@ -5,13 +5,14 @@ const getWordle = async () => {
 		const options = {
 			method: 'GET',
 			url: 'https://random-words5.p.rapidapi.com/getMultipleRandom',
-			params: { count: '2', wordLength: '5' },
+			params: { count: '1', wordLength: '5' },
 			headers: {
 				'X-RapidAPI-Host': process.env.REACT_APP_GET_RANDOM_HOST,
 				'X-RapidAPI-Key': process.env.REACT_APP_GET_RANDOM_KEY,
 			},
 		};
 		// const response = await axios.request(options);
+		// console.log(response.data[0].toUpperCase());
 		// return response.data[0].toUpperCase();
 
 		return wordList[Math.floor(Math.random() * 500)].toUpperCase();
