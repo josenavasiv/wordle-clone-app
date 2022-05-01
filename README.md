@@ -2,7 +2,7 @@
   Wordle Clone v1
 </h1>
 
-First iteration of the Wordle clone created with React and React-Redux w/ Redux Toolkit. Consumes the [Random Words](https://rapidapi.com/sheharyar566/api/random-words5/) and the [Word Dictionary](https://rapidapi.com/twinword/api/word-dictionary/) APIs from RapidAPI with Axios in order to get a random word to use for the game. Live at https://wordlecloneiv.netlify.app/ and hosted on [Netlify](https://www.netlify.com/). However, for now I removed the functionality for the app to ping the word API's and added my own word randomization.
+First iteration of the Wordle clone created with React and React-Redux w/ Redux Toolkit. Consumes the [Random Words](https://rapidapi.com/sheharyar566/api/random-words5/) and the [Word Dictionary](https://rapidapi.com/twinword/api/word-dictionary/) APIs from RapidAPI with Axios in order to get a random word to use for the game. Live at https://wordlecloneiv.netlify.app/ and hosted on [Netlify](https://www.netlify.com/). However, for now I have removed the functionality for the app to ping the word APIs and temporarily have added my own word randomization.
 
 ![alt text](https://i.imgur.com/JxQG89i.png)
 
